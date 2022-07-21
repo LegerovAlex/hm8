@@ -1,0 +1,159 @@
+@import "variables.scss";
+@import "mixin.scss";
+
+.section {
+  background: #1e1e1e;
+  padding: 100px 25px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: $font-family;
+  }
+
+  .title {
+    max-width: 470px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+    color: #ffffff;
+  }
+
+  .box {
+    min-width: 360px;
+    max-height: 900px;
+    padding-top: 160px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #fcfcfc;
+    border-radius: 40px;
+    position: relative;
+
+    &-img {
+      position: absolute;
+      z-index: 90;
+      top: 45px;
+      transform: translate(17%);
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 44px;
+      color: #252525;
+      mix-blend-mode: normal;
+    }
+
+    &__subtitle {
+      position: relative;
+      z-index: 99;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #252525;
+      margin-bottom: 40px;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 19px;
+    }
+    &__text {
+      margin-bottom: 50px;
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        color: #000000;
+      }
+    }
+
+    &-items {
+      @include flex-between;
+      min-width: 300px;
+      align-items: center;
+      margin-bottom: 21px;
+
+      &-buttons {
+        button {
+          padding: 20px 25px;
+          background: #252525;
+          border-radius: 100%;
+          border: none;
+        }
+        button:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-log-in {
+      a {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: #252525;
+        text-decoration: none;
+
+        span {
+          color: rgba(255, 195, 62, 1);
+        }
+      }
+    }
+  }
+
+  .form-items {
+    @include flex-between;
+    padding: 18px 20px;
+    min-width: 300px;
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 10px;
+
+    ::placeholder {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__input {
+      min-width: 200px;
+      border: none;
+      background: none;
+      outline: none;
+    }
+  }
+
+  .form-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 60px;
+
+    &__check {
+      width: 12px;
+      height: 12px;
+    }
+    &__description {
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 10px;
+      color: #000000;
+
+      span {
+        color: rgba(255, 195, 62, 1);
+      }
+    }
+  }
+}
